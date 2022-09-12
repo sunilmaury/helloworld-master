@@ -27,7 +27,7 @@ pipeline {
         }
         stage("Publish to Nexus Repository Manager") {
             steps{
-                def pom = readMavenPom file: 'pom.xml'
+                
                  nexusArtifactUploader artifacts: [
                     [
                         artifactId: 'Maven Project', 
