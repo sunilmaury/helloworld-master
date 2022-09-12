@@ -29,9 +29,9 @@ pipeline {
             steps{
                  nexusArtifactUploader artifacts: [
                     [
-                        artifactId: 'maven-project', 
+                        artifactId: 'webapp', 
                         classifier: '',
-                        file: 'C:\ProgramData\Jenkins\.jenkins\workspace\hello-world\webapp\target\webapp.war',
+                        file: 'target\webapp.war',
                         type: 'war'
                     ]
                 ], 
