@@ -32,7 +32,7 @@ pipeline {
                     [
                         artifactId: 'maven-project', 
                         classifier: '',
-                        file: 'target/webapp.war',
+                        file: 'C:/ProgramData/Jenkins/.jenkins/workspace/hello-world/webapp/target/webapp.war',
                         type: 'war'
                     ]
                 ], 
