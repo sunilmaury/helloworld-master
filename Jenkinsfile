@@ -14,7 +14,7 @@ pipeline {
         stage("Clone code from Git Repo") {
             steps {
                 script {
-                    git 'https://github.com/sunilmaury/hello_world.git';
+                    git 'https://github.com/sunilmaury/helloworld-master.git';
                 }
             }
         }
