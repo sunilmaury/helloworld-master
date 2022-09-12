@@ -27,9 +27,10 @@ pipeline {
         }
         stage("Publish to Nexus Repository Manager") {
             steps{
+                def pom = readMavenPom file: 'pom.xml'
                  nexusArtifactUploader artifacts: [
                     [
-                        artifactId: 'webapp', 
+                        artifactId: 'Maven Project', 
                         classifier: '',
                         file: 'target/webapp.war',
                         type: 'war'
