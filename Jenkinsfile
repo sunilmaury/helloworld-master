@@ -48,10 +48,9 @@ pipeline {
                 }
            stage ('deploy war/jar tomcat server'){
                 steps{                 
-                 script {   
-                   bat '''copy C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\hello-world\\webapp\\target\\webapp.war C:\\Program Files\\Apache Software Foundation\\Tomcat 10.0\\webapps\\'''
+                deploy adapters: [tomcat8(credentialsId: 'tomcat-users', path: '', url: 'http://localhost:8089')], contextPath: 'C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps', war: 'war' 
              }  
            }
         }
       }
-    }
+    
