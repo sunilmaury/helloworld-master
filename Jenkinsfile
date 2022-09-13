@@ -46,7 +46,12 @@ pipeline {
               
                     }
                 }
-            }
+           stage ('deploy'){
+                steps{                 
+                 script {   
+                   bat '''copy C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\hello-world\\webapp\\target\\*.war C:\\Program Files\\Apache Software Foundation\\Tomcat 10.0\\webapps\\'''
+             }  
+           }
         }
-    
+      }
 
