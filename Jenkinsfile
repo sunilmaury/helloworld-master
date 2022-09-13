@@ -48,7 +48,7 @@ pipeline {
                 }
            stage ('deploy war/jar tomcat server'){
                 steps{                 
-                   sh "curl -v -u admin:sunil12345 -T http://localhost:8081/repository/maven-repo/com/example/maven-project/maven-project/1.0-SNAPSHOT/maven-project-1.0-20220914.035934-5.war 'http://localhost:8089 C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps'"
+                   sh "curl -v -u admin:sunil12345 -T http://localhost:8081/repository/maven-repo/com/example/maven-project/maven-project/1.0-SNAPSHOT/maven-project-1.0-20220914.035934-5.war 'http://localhost:8089'"
              }  
            }
         }
