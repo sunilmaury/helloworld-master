@@ -48,7 +48,7 @@ pipeline {
                 }
            stage ('deploy war/jar tomcat server'){
                 steps{                 
-                deploy adapters: [tomcat8(credentialsId: 'tomcat-users', path: '', url: 'http://localhost:8089')], contextPath: 'C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps', war: 'war' 
+                   sh "curl -v -u admin:sunil12345 -T http://localhost:8081/repository/maven-repo/com/example/maven-project/maven-project/1.0-SNAPSHOT/maven-project-1.0-20220914.035934-5.war 'http://localhost:8089/manager/html/upload?path=C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps'"
              }  
            }
         }
